@@ -1,0 +1,4 @@
+interface:
+  display_name: "Repo-grounded Change"
+  short_description: "基于现有仓库评估优化方案，确认后实施并按验收标准验证"
+  default_prompt: "使用 $repo-grounded-change 评估当前项目的改动需求，比较方案并在我确认后执行。"
