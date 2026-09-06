@@ -1,35 +1,19 @@
 # Options and clarification
 
+Read when genuine alternatives or an unresolved consequential choice exist.
+
 ## Option quality
 
-Provide 2 or 3 mutually exclusive options when genuine alternatives exist. For each option state:
+Recommend the best fit for the user's outcome and repository constraints, not merely the smallest diff. Present two or three options only when they embody real product or engineering tradeoffs that the user needs to decide. Do not manufacture alternatives, include obviously inferior choices for balance, or ask the user to select routine implementation details.
 
-- behavior and user experience;
-- implementation shape and major code areas;
-- preserved and changed behavior;
-- compatibility and migration consequences;
-- testing implications;
-- risks, effort, and rollback difficulty.
+For each meaningful option, cover only decision-relevant differences: behavior, affected code, preserved contracts, compatibility or migration, verification, cost, and rollback. If one option is clearly sufficient, give that recommendation and a concise reason. Explain rejected approaches only when that helps the decision.
 
-Recommend the option with the best overall fit for the user's stated outcome and repository constraints, not merely the smallest diff.
+## Clarification and authorization
 
-Do not present obviously inferior or unsafe choices as equal alternatives. If only one option is feasible, document the rejected approaches and their blocking reasons.
+Check the main skill's authorization contract before asking anything. An existing approved baseline or clear direct implementation request needs no second execution approval.
 
-## Clarification rules
+Ask the smallest set of questions that resolves missing product behavior, consequential risk, scope, or success criteria. Combine closely related questions if that avoids another round; do not impose one round per requirement theme. Use a suitable structured input tool only when its documented mode and purpose allow it. Otherwise ask a concise natural-language question. Suggested choices are optional; accept free-text answers and do not require option codes or magic approval phrases.
 
-- One requirement theme per round.
-- At most 3 questions in a round; prefer 1 question when it unlocks the solution.
-- Each question has 2 or 3 mutually exclusive choices.
-- Put the recommended choice first, mark it `（推荐）`, and explain its impact.
-- Ask only about product behavior, material risk, scope, or acceptance—not low-level details Codex can determine from the repository.
-- Use structured input controls when available. Otherwise accept responses such as `A`, `Q1-A`, `按建议执行`, or a user-written modification.
+For assessment-only or plan-first requests, provide a concrete recommendation before seeking missing implementation approval. An answer resolving a product question does not automatically authorize execution if the user explicitly reserved a later approval step. Discussion, praise, and silence are not approval.
 
-After each answer, report:
-
-- confirmed decisions;
-- user modifications;
-- unresolved items;
-- conflicts;
-- impact on later recommendations.
-
-Do not interpret discussion or praise as implementation approval.
+After an answer, incorporate it and proceed with authorized work. Mention only changed decisions, remaining blockers, or material downstream effects. Summarize a full baseline once when a complex plan is first approved or materially revised, not after every reply.

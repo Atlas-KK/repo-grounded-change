@@ -1,6 +1,6 @@
 # Discovery and impact
 
-Use this reference before proposing options.
+Use for cross-module or compatibility-sensitive discovery. For bounded changes, inspect only the relevant behavior and immediate impact; this checklist does not require a full proposal or approval round.
 
 ## Repository discovery
 
@@ -12,11 +12,11 @@ Inspect the smallest relevant surface:
 - related unit, integration, visual, and end-to-end tests;
 - applicable approved product or design documents.
 
-Capture the baseline before editing. If runtime reproduction is unavailable, distinguish source-level evidence from visually verified behavior.
+Capture a proportionate baseline before editing. If runtime reproduction is unavailable, distinguish source-level evidence from visually verified behavior.
 
 ## Pain-point statement
 
-Summarize:
+For a full proposal, summarize the following; for a brief assessment, include only decision-relevant findings:
 
 1. current behavior;
 2. user pain or operational cost;
@@ -37,3 +37,4 @@ Evaluate only relevant categories:
 - tests, build, deployment, observability, and rollback.
 
 Removing a UI section does not automatically authorize deleting its backing data. Reusing a component does not automatically mean mounting the same interactive DOM in a second context; inspect whether a read-only or context-specific variant better preserves semantics.
+
